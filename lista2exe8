@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int multiplicarRecursivo(int a, int b) {
+    
+    if (b == 0) {
+        return 0;
+    }
+    
+    else {
+        return a + multiplicarRecursivo(a, b - 1);
+    }
+}
+
+int main() {
+    int num1, num2;
+
+    printf("Digite o primeiro número: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo número: ");
+    scanf("%d", &num2);
+
+    int resultado = multiplicarRecursivo(num1, num2);
+    printf("O resultado da multiplicação é: %d\n", resultado);
+
+    return 0;
+}
